@@ -7,11 +7,20 @@ import Form from './Form'
 import ProgressButton from './mui/ProgressButton'
 import useStateEmptyCheck from '@/hooks/useStateEmptyCheck'
 import { PLACEHOLDER } from '@/constants/message'
+import { ALGORITHM } from '@/constants/settingsList'
 
 const Main = () => {
   const title = useStrategyStore((state) => state.title)
+  const algorithm = useStrategyStore((state) => state.algorithm)
   const setField = useStrategyStore((state) => state.setField)
   const { handleEmptyCheck } = useStateEmptyCheck()
+
+  const handleSubmit = () => {
+    if (algorithm === ALGORITHM.STATIC_ALLOC.name) {
+      return handleEmptyCheck()
+    }
+    return false
+  }
 
   const handleNext = () => {
     setTimeout(() => alert('이용해주셔서 감사합니다.'), 0)
@@ -47,10 +56,7 @@ const Main = () => {
           handleNext={handleNext}>
           포트 추출
         </ProgressButton>
-        <ProgressButton
-          label="백테스트"
-          handleProgressCheck={handleEmptyCheck}
-          handleNext={handleNext}>
+        <ProgressButton label="백테스트" handleProgressCheck={handleSubmit} handleNext={handleNext}>
           백테스트
         </ProgressButton>
       </div>

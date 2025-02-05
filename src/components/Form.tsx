@@ -25,6 +25,7 @@ const Form = () => {
   // params에 따른 DOM 렌더링
   const DOM_LIST: { [x: string]: { [y: string]: React.ReactElement } } = {
     static_alloc: {
+      // 주기 리밸런싱
       cycle_rebalancing: (
         <Dropdown
           label="주기 리밸런싱"
@@ -34,6 +35,7 @@ const Form = () => {
           placeholder={PLACEHOLDER.cycleRebalancing}
         />
       ),
+      // 밴드 리밸런싱
       band_rebalancing: (
         <Input
           label="밴드 리밸런싱"
@@ -46,7 +48,9 @@ const Form = () => {
           message={RANGE_MESSAGE.oneToHundred}
         />
       ),
+      // 자산군 추가
       asset_Container_dom: <AssetContainer />,
+      // 마켓 타이밍 설정
       market_container_dom: <MarketContainer />
     }
   }

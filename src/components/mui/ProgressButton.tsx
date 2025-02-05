@@ -18,7 +18,7 @@ const ProgressButton = ({ label, children, handleProgressCheck, handleNext }: Pr
     const currentIndex = PROGRESS_STEP.indexOf(progress)
 
     // 타이머 변수로 저장 및 클린업 처리
-    let timer: number | undefined
+    let timer
     if (currentIndex < PROGRESS_STEP.length - 1) {
       timer = setTimeout(() => setProgress(PROGRESS_STEP[currentIndex + 1]), 1500)
     } else {
