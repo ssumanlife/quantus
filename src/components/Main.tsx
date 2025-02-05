@@ -15,6 +15,7 @@ const Main = () => {
   const setField = useStrategyStore((state) => state.setField)
   const { handleEmptyCheck } = useStateEmptyCheck()
 
+  // 전략배분 일 시에만 프로그래스 버튼 동작
   const handleSubmit = () => {
     if (algorithm === ALGORITHM.STATIC_ALLOC.name) {
       return handleEmptyCheck()
