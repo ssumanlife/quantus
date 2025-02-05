@@ -1,5 +1,5 @@
 import { css } from '@emotion/react'
-import Logo from './mui/Logo'
+import Logo from './atoms/Logo'
 import { theme } from '@/styles/theme'
 import { PATH } from '@/constants/path'
 import { Link } from 'react-router-dom'

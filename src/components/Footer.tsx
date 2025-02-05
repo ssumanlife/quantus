@@ -4,7 +4,7 @@ import { BiSolidMessageRounded } from 'react-icons/bi'
 import { IoMail } from 'react-icons/io5'
 const Footer = () => {
   return (
-    <footer css={container}>
+    <footer css={container} id="footer">
       <div css={wrapper}>
         <div css={menuWrapper}>
           <div css={menu}>

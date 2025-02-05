@@ -1,13 +1,13 @@
 import { css } from '@emotion/react'
-import Dropdown from './mui/Dropdown'
+import Dropdown from './atoms/Dropdown'
 import { ALGORITHM, REBALANCING } from '@/constants/settingsList'
 import { theme } from '@/styles/theme'
 import useStrategyStore from '@/stores/useStrategyStore'
-import Input from './mui/Input'
+import Input from './atoms/Input'
 import AssetContainer from './AssetContainer'
 import MarketContainer from './MarketContainer'
 import { useParams } from 'react-router-dom'
-import Calendar from './mui/Calendar'
+import Calendar from './atoms/Calendar'
 import { PLACEHOLDER, RANGE_MESSAGE } from '@/constants/message'
 
 const Form = () => {

@@ -29,7 +29,12 @@ const Input = ({
 }: Props) => {
   const maxLengthCheck = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { value } = e.target
-    if (Number(value) < minRange || Number(value) > maxRange || value.length > 10) {
+    if (
+      !Number(value) ||
+      Number(value) < minRange ||
+      Number(value) > maxRange ||
+      value.length > 10
+    ) {
       e.target.value = ''
       handleValue(undefined)
     }

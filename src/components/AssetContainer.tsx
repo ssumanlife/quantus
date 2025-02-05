@@ -3,11 +3,11 @@ import useStrategyStore from '@/stores/useStrategyStore'
 import { theme } from '@/styles/theme'
 import { css } from '@emotion/react'
 import { IoIosArrowDown } from 'react-icons/io'
-import Dropdown from './mui/Dropdown'
+import Dropdown from './atoms/Dropdown'
 import { GoPlus } from 'react-icons/go'
 import { CgClose } from 'react-icons/cg'
-import Input from './mui/Input'
-import Checkbox from './mui/Checkbox'
+import Input from './atoms/Input'
+import Checkbox from './atoms/Checkbox'
 import { lengthCheck } from '@/utills/lengthCheck'
 import { AssetStatesModel } from '@/types/strategyState'
 import { RANGE_MESSAGE } from '@/constants/message'
@@ -73,7 +73,6 @@ const OpenAssetStates = ({ assetList }: { assetList: AssetStatesModel[] }) => {
           <Input
             label="비중"
             unit="%"
-            placeholder="0"
             value={state.percent}
             handleValue={(value) => setAssetState(index, 'percent', value)}
             minRange={1}
